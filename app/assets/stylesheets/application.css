@@ -233,7 +233,7 @@ a:hover,
 a:active {
 	/*color: #FF512F;
 	outline: 0;*/
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 /* selected text */
