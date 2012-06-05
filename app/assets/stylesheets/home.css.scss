@@ -10,6 +10,13 @@ $content-padding-phone: 5px;
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
+@mixin prefixer($property, $value) {
+	-moz-#{$property}: 		$value;
+	-webkit-#{$property}: 	$value;
+	#{$property}: 			$value;
+}
+
+
 .ui-body-c, .ui-overlay-c {
 	color: #FFF;
 }
@@ -20,6 +27,7 @@ $content-padding-phone: 5px;
 	figure {
 		position: relative;
 		cursor: pointer;
+		@include prefixer(box-shadow, 0 1px 3px rgba(0,0,0,.75));
 	}
 
 	figure img {
@@ -38,14 +46,16 @@ $content-padding-phone: 5px;
 		color: rgba(255,255,255,.8);
 		position: absolute;
 		bottom: 0;
+		text-shadow: 1px 1px 1px #333, 2px 2px 1px #000;
 		
 		.more {
 			color: $redorange;
 			position: absolute;
-			bottom: 20%;
+			bottom: 18%;
 			right: 2%;
 			font-size: 1rem;
 			text-transform: none;
+			text-shadow: none;
 
 			&:after{
 				font-family: monospace;
@@ -63,8 +73,14 @@ $content-padding-phone: 5px;
 		margin: 0;
 		padding: 0;
 
+		h3 {
+			padding-bottom: 3px;
+			border-bottom: 1px solid #666;
+		}
+
 		> li {
 			@include box-sizing-border;
+			@include prefixer(box-shadow, 0 1px 3px rgba(0,0,0,.5));
 			background: none rgba(0,0,0,.25);
 			margin-left: 0;
 			padding: $content-padding;
@@ -77,6 +93,7 @@ $content-padding-phone: 5px;
 	height: auto;
 }
 
+/* MEDIA QUERY FOR PHONES */
 @media only screen and (max-width: 767px), only screen and (max-width: 800px) and (max-device-pixel-ratio : 1.5) {
 	body {
 		font-size: 13px;
@@ -84,5 +101,12 @@ $content-padding-phone: 5px;
 	.content,
 	.details > li {
 		padding: $content-padding-phone;
+	}
+
+	.details > li {
+		float: none;
+		margin: 0 0 2%;
+		display: block;
+		width: auto;
 	}
 }
