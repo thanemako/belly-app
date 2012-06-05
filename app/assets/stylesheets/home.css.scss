@@ -22,7 +22,7 @@ $content-padding-phone: 5px;
 }
 
 .movie,
-.music {
+.album {
 	
 	figure {
 		position: relative;
@@ -49,12 +49,11 @@ $content-padding-phone: 5px;
 		
 		.more {
 			color: $redorange;
-			position: absolute;
-			bottom: 18%;
-			right: 2%;
+			vertical-align: middle;
 			font-size: 1rem;
-			text-transform: none;
+			margin-left: 1rem;
 			text-shadow: none;
+			white-space: nowrap;
 
 			&:after{
 				font-family: monospace;
@@ -105,14 +104,18 @@ $content-padding-phone: 5px;
 	.details > li {
 		padding: $content-padding-phone;
 	}
-	.title .more {
-		visibility: hidden;
+	.movie,
+	.album {
+		.title .more {
+			/*visibility: hidden;*/
+		}
+		.details > li {
+			float: none;
+			margin: 0 0 2%;
+			display: block;
+			width: auto;
+			min-height: 1px;
+		}
 	}
-	.details > li {
-		float: none;
-		margin: 0 0 2%;
-		display: block;
-		width: auto;
-		min-height: 1px;
-	}
+	
 }
