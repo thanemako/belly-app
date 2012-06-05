@@ -1,0 +1,680 @@
+/*
+*= require_self
+*= require jquery.mobile
+*= require_tree .
+*/
+
+/*******************************************
+ *****       Belly Test Project       ******
+ -------------------------------------------
+ *written by Thane Woidan - thanewoidan.com*
+ ******************************************/
+
+/* Mini/modified version of Eric Meyer's reset -- meyerweb.com */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,article,aside,big,cite,code,del,details,dfn,em,figcaption,figure,footer,header,hgroup,img,ins,kbd,nav,q,samp,section,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin: 0; padding: 0; border: 0; outline: 0; vertical-align: baseline;}:focus{outline: 0;}img{-ms-interpolation-mode: bicubic;}body{line-height: 1;}table{border-spacing: 0;}caption,th,td{text-align: left; font-weight: normal;}blockquote:before,blockquote:after,q:before,q:after{content: "";}blockquote,q{quotes: "" "";}
+
+/**************
+	BASICS
+**************/
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+/* BASE FONT SIZE */
+body {
+	background: none #333;
+	font-size: 16px;
+}
+
+/* BASE FONT FAMILY and COLOR -- FORM ELEMENTS CAN HAVE INHERITANCE ISSUES */
+body, button, input, select, textarea {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+}
+
+/* DEFAULT MARGIN FOR BLOCK LEVEL CONTENT ELEMENTS */
+address, blockquote, code, figure, dl, ol, ul, p, pre, table {
+	margin: 0 0 1em;
+	line-height: 1.35em;
+}
+
+/* DISPLAY BLOCK OF HTML5 ELEMENTS */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 .35em;
+	font-weight: bold;
+	/*font-family: Palatino Linotype, Book Antiqua, Palatino, serif;*/
+	line-height: 115%;
+}
+
+h1 {
+	font-size: 2.25em;
+}
+
+h2 {
+	font-size: 1.75em;
+}
+
+h3 {
+	font-size: 1.25em;
+}
+
+h4 {
+	font-size: 1.20em;
+}
+
+h5 {
+	font-size: 1.15em;
+}
+
+h6 {
+	font-size: 1em;
+	color: #666;
+	padding-bottom: 3px;
+	border-bottom: 1px dotted #333;
+}
+
+/* vertically space headings from block-level content elements */
+address+h1, blockquote+h1, code+h1, figure+h1, dl+h1, ol+h1, ul+h1, p+h1, pre+h1, table+h1,
+address+h2, blockquote+h2, code+h2, figure+h2, dl+h2, ol+h2, ul+h2, p+h2, pre+h2, table+h2,
+address+h3, blockquote+h3, code+h3, figure+h3, dl+h3, ol+h3, ul+h3, p+h3, pre+h3, table+h3,
+address+h4, blockquote+h4, code+h4, figure+h4, dl+h4, ol+h4, ul+h4, p+h4, pre+h4, table+h4,
+address+h5, blockquote+h5, code+h5, figure+h5, dl+h5, ol+h5, ul+h5, p+h5, pre+h5, table+h5,
+address+h6, blockquote+h6, code+h6, figure+h6, dl+h6, ol+h6, ul+h6, p+h6, pre+h6, table+h6 {
+	margin-top: 1em;
+}
+
+hr {
+	border: 0;
+	border-bottom: 1px dotted #BBB;
+	margin: 1.25em 0;
+	clear: both;
+}
+
+ol, ul {
+	list-style-position: outside;
+	padding-left: 2.5em;
+}
+
+nav ol, nav ul {
+	list-style: outside none;
+	padding: 0;
+}
+
+ol.nobull, ul.nobull {
+	list-style: outside none;
+	margin: 0;
+	padding: 0;
+}
+
+ol.nobull > li, ul.nobull > li {
+	margin: 0;
+	padding: 0;
+}
+
+ol.insidebull, ul.insidebull {
+	list-style-position: inside;
+	padding-left: 0;
+}
+
+ol.lz {
+	list-style-type: decimal-leading-zero;
+}
+
+li {
+	margin-bottom: .25em;
+	margin-left: .25em;
+	padding-left: .25em;
+}
+
+ul {
+	list-style-type: disc;
+}
+
+ol ul, ul ul {
+	list-style-type: circle;
+	margin-bottom: 0;
+	padding-left: 2.5em;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+ul ol, ol ol {
+	list-style-type: lower-roman;
+	padding-left: 2.5em;
+}
+
+b, strong, .bold {
+	font-weight: bold;
+}
+
+i, em, .italic {
+	font-style: italic;
+}
+
+pre, code {
+	background: none repeat scroll 0 0 #FFFBEF;
+	border: 1px dotted #CCCCCC;
+	color: #000000;
+	font-family: monospace;
+	text-shadow: 1px 1px 1px #BBBBBB;
+}
+
+pre {
+	display: block;
+	line-height: 125%;
+	margin: 15px;
+	padding: 15px;
+}
+
+blockquote {
+	padding: .75em 0 .5em 1.25em;
+	border-left: 1px solid #CCC;
+	font-style: italic;
+}
+
+blockquote p {
+	font-size: 1.25em;
+	line-height: 140%;
+	color: #777;
+}
+
+blockquote cite {
+	font-size: .9em;
+	color: #444;
+}
+
+blockquote cite:before {
+	content: "\2014\0020";
+}
+
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+	
+sup {
+	top: -0.5em;
+}
+	
+sub {
+	bottom: -0.25em;
+}
+
+small {
+	font-size: .85em;
+}
+
+a, a:active, a:focus {
+	text-decoration: none;
+	color: #FF512F;
+	cursor: pointer;
+}
+
+a:focus {
+	outline: 1px solid #CCC;
+}
+
+a:hover,
+a:active {
+	/*color: #FF512F;
+	outline: 0;*/
+	text-decoration: underline;
+}
+
+/* selected text */
+::selection {
+	background: none #336699;
+	color: #FFF;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: none #336699;
+	color: #FFF;
+	text-shadow: none;
+}
+
+/* CLEARFIX, with added .cols class for  */
+.clearfix:before, .clearfix:after, .cols:before, .cols:after {
+	content: "\0020"; 
+	display: block; 
+	height: 0; 
+	overflow: hidden;
+}
+
+.clearfix:after, .cols:after {
+	clear: both;
+}
+
+.clearfix, .cols {
+	zoom: 1;
+	*overflow: hidden;
+}
+
+.clear {
+	clear: both;
+}
+
+/**************
+	FORMS
+**************/
+
+form {
+	
+}
+
+form .form-ele,
+fieldset,
+form legend,
+form h2 {
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+form h2 + .form-ele,
+form + fieldset {
+	margin-top: 5px;
+}
+
+fieldset {
+	border: 2px solid #336699;
+	padding: 10px;
+}
+
+form label,
+form label.block {
+	display: block;
+	margin: 5px 0;
+}
+
+form input,
+form select,
+form textarea {
+	display: block;
+	margin: 5px 0;
+	padding: 5px;
+}
+
+form input[type='text'],
+form input[type='password'],
+form input[type='email'],
+form input[type='url'],
+form input[type='number'],
+form input[type='date'],
+form select,
+form textarea {
+	background: none #F6F6F6;
+	border: 2px solid #67666B;
+	
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	background-clip: padding-box;
+	
+	/* BORDER COLOR FADE IN/OUT */
+	-moz-transition: border-color 50ms ease-in-out;
+	-webkit-transition: border-color 50ms ease-in-out;
+	transition: border-color 50ms ease-in-out;
+	
+	/* SHADOW FADE IN/OUT */
+	-moz-transition: -moz-box-shadow 100ms ease-in-out;
+	-webkit-transition: -moz-box-shadow 100ms ease-in-out;
+	transition: -moz-box-shadow 100ms ease-in-out;
+}
+
+form input[type='text']:focus,
+form input[type='password']:focus,
+form input[type='email']:focus,
+form input[type='url']:focus,
+form input[type='number']:focus,
+form input[type='date']:focus,
+form select:focus,
+form textarea:focus {
+	border-color: #336699;
+	
+	-moz-box-shadow: 0 0 3px rgba(5, 55, 100, .75);
+	-webkit-box-shadow: 0 0 3px rgba(5, 55, 100, .75);
+	box-shadow: 0 0 3px rgba(5, 55, 100, .75);
+}
+
+form textarea {
+	height: 4em;
+}
+
+form input[type='radio'] {
+	width: 13px;
+	height: 13px;
+	margin-right: 3px;
+	display: inline;
+}
+
+form input[type='radio'] + label,
+form input[type='checkbox'] + label,
+form select + label,
+form select + select + label {
+	display: inline;
+	margin: 0;
+}
+
+form input[type='submit'] {
+	margin: 35px 0 0;
+}
+
+form .form-ele {
+	margin-top: 0;
+	margin-bottom: .75em;
+}
+
+form .form-ele-inline input,
+form .form-ele-inline select,
+form .form-ele-inline textarea,
+form .form-ele-inline label {
+	display: inline;
+	vertical-align: middle;
+}
+
+/* placeholder attribute text -- must be seperate to work */
+::-webkit-input-placeholder {
+	color: #666;
+}
+:-moz-placeholder {
+	color: #666;
+}
+
+
+/*****************
+	TABLES
+******************/
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table td,
+table th {
+	padding: 8px 10px;
+	vertical-align: top;
+}
+
+table.tiny td,
+table.tiny th {
+	padding: 4px 5px;
+}
+
+/* DATA */
+table td {
+	border: 1px solid #DDD;
+	border-width: 1px 0;
+}
+
+/* HEADINGS */
+table th {
+	font-weight: bold;
+}
+
+table thead th {
+	vertical-align: bottom;
+	border-bottom: 1px solid #DDD;
+}
+
+table tfoot th {
+	vertical-align: top;
+	border-top: 1px solid #DDD;
+}
+
+/* VERTICAL CELL BORDERS */
+table.bordered,
+table.outer-border {
+	border: 1px solid #CCC;
+	border-color: #DDD #CCC #BBB #DDD;
+}
+
+table.bordered th,
+table.bordered td {
+	border-left: 1px solid #DDD;
+}
+
+/* ZEBRA STRIPING -- doesn't work in IE < 8 */
+table.zebra tbody tr:nth-child(odd) td,
+table.zebra tbody tr:nth-child(odd) th {
+	background-color: #F6F6F6;
+}
+
+/**************
+	COLUMNS
+**************/
+
+/* wrapping columns with .cols will clearfix */
+.cols {
+	
+}
+
+/* intervals of 5% at a time, as well as 33% classes for thirds */
+.col-5,.col-10,.col-15,.col-20,.col-25,.col-30,.col-33,.col-35,.col-40,.col-45,
+.col-50,.col-55,.col-60,.col-65,.col-70,.col-75,.col-80,.col-85,.col-90,.col-95 {
+	margin: 0 2% 2% 0;
+	float: left;
+	display: inline;
+	min-height: 1px;
+}
+
+.col-5  { width: 3.1%;  }
+.col-10 { width: 8.2%;  }
+.col-15 { width: 13.3%; }
+.col-20 { width: 18.4%; }
+.col-25 { width: 23.5%; }
+.col-30 { width: 28.6%; }
+.col-35 { width: 33.7%; }
+.col-40 { width: 38.8%; }
+.col-45 { width: 43.9%; }
+.col-50 { width: 49%;   }
+.col-55 { width: 54.1%; }
+.col-60 { width: 59.2%; }
+.col-65 { width: 64.3%; }
+.col-70 { width: 69.4%; }
+.col-75 { width: 74.5%; }
+.col-80 { width: 79.6%; }
+.col-85 { width: 84.7%; }
+.col-90 { width: 89.8%; }
+.col-95 { width: 94.9%; }
+
+/* thirds, for use only with 3 of each other! */
+.col-33 { width: 32%; }
+
+/* last column in row needs this class */
+.col-last {
+	margin-right: 0;
+	display: inline-block;
+	float:none;
+	position: relative;
+	*display:block;
+	*width: auto;
+}
+
+.ie-lt7 .col-last {
+
+}
+
+
+/*****************
+	MEDIA BOXES
+******************/
+.mb {
+	margin:1.75em 0;
+}
+.mb .img,.mb .bdy {
+}
+.mb .img {
+	float:left;
+	margin-right:1.35em;
+}
+.mb .img img,.mb .img .img {
+	display:block;
+}
+.mb .bdy {
+}
+.mb .bdy *:first-child {
+	margin-top: 0;
+}
+
+/* to support IE6 and under, you need .mb as a wrapper and a direct child div with to apply the helper classes */
+/* IMAGE ON RIGHT */
+.mb-ir .img {
+	float:right;
+	margin-right:0;
+	margin-left: 1.35em;
+}
+/* IMAGE AND TEXT BLOCKED -- ABOVE/BELOW EACH OTHER */
+.mb-ib .img,.mb-ib .img img,.mb-ib .img .img,.mb-ib .bdy {
+	float:none !important;
+	display:block;
+	margin:0 auto;
+	/*text-align:center;*/
+}
+.mb-ib .bdy *:first-child {
+	/*margin-top: 1em;*/
+}
+
+/**************
+	IN-CONTENT FLOATS
+**************/
+
+.floaty {
+	float: right;
+	display: inline;
+	clear: right;
+	margin: 5px 5px 20px 20px;
+	-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.25);
+	-moz-box-shadow: 1px 1px 2px rgba(0,0,0,.25);
+	box-shadow: 1px 1px 2px rgba(0,0,0,.25);
+}
+
+.floaty.bordered { border: 1px solid #CCC; }
+
+.floaty.noshadow { -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+
+.floaty > * { display: block; margin: 0 auto; *margin: 0;}
+
+.floaty details,
+.floaty figcaption,
+.floaty .details {
+	padding: 5px;
+}
+
+/**************
+	BUTTONS
+**************/
+
+.btn {
+	/* layout */
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	padding: 4px 10px;
+	vertical-align: middle;
+
+	/* text */
+	color: #444;
+	line-height: 125%;
+	text-decoration: none;
+	cursor: pointer;
+
+	/* borders */
+	border: 1px solid #CCC;
+	border-color: rgba(0,0,0,.2) rgba(0,0,0,.2) rgba(0,0,0,.4);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+  	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+
+  	/* shadows -- a highlight on top and slight shadow on bottom */
+  	-webkit-box-shadow: 0 1px 1px rgba(255,255,255,.25) inset, 0 -1px 0 rgba(0,0,0,.1) inset;
+  	-moz-box-shadow: 0 1px 1px rgba(255,255,255,.25) inset, 0 -1px 0 rgba(0,0,0,.1) inset;
+  	box-shadow: 0 1px 1px rgba(255,255,255,.25) inset, 0 -1px 0 rgba(0,0,0,.1) inset;
+  	text-shadow: 0 1px 1px rgba(0,0,0,.15);
+
+  	/* backgrounds */
+	background-color: #F9F9F9;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#F9F9F9), to(#E6E6E6)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #F9F9F9, #E6E6E6); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #F9F9F9, #E6E6E6); /* FF3.6+ */
+	background-image:     -ms-linear-gradient(top, #F9F9F9, #E6E6E6); /* IE10 */
+	background-image:      -o-linear-gradient(top, #F9F9F9, #E6E6E6); /* Opera 11.10+ */
+	background-image:         linear-gradient(to bottom, #F9F9F9, #E6E6E6);
+}
+
+.btn:active,.btn:focus { outline: 0; text-decoration: none; }
+
+.btn:hover {
+	background: none #ECECEC;
+	text-decoration: none;
+	color: #000;
+}
+
+.btn:active {
+	text-shadow: 0 1px 0 rgba(0,0,0,.2);
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.1) inset, 0 -1px 0 rgba(255,255,255,.25) inset;
+  	-moz-box-shadow: 0 1px 1px rgba(0,0,0,.1) inset, 0 -1px 0 rgba(255,255,255,.25) inset;
+  	box-shadow: 0 1px 1px rgba(0,0,0,.1) inset, 0 -1px 0 rgba(255,255,255,.25) inset;
+
+	background-color: #F9F9F9;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#E6E6E6), to(#F9F9F9)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #E6E6E6, #F9F9F9); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #E6E6E6, #F9F9F9); /* FF3.6+ */
+	background-image:     -ms-linear-gradient(top, #E6E6E6, #F9F9F9); /* IE10 */
+	background-image:      -o-linear-gradient(top, #E6E6E6, #F9F9F9); /* Opera 11.10+ */
+	background-image:         linear-gradient(to bottom, #E6E6E6, #F9F9F9);
+}
+
+.btn-large { font-size: 1.25em; padding: 6px 14px; }
+.btn-small { font-size: .85em;  padding: 3px 6px; }
+.btn-tiny  { font-size: .75em;  padding: 2px 4px; }
+
+/**************
+	CONTAINERS
+**************/
+
+/* spaces content during resizing */
+.page { padding: 0 20px; }
+
+#main {
+	width: 100%;
+	max-width: 960px;
+	min-width: 320px;
+	margin: 0 auto;
+	background: #444 url(http://thanewoidan.com/images/work/333-75.png) 0 0 repeat;
+}
+
+header {
+	background: none #336699;
+}
+
+header h1 {
+	margin: 0;
+	color: #FFF;
+}
+
+footer {
+	background: none #DDD;
+	color: #999;
+}
+
+.content {
+	padding: 15px;
+}

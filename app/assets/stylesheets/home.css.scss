@@ -1,0 +1,88 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$redorange: #FF512F;
+$content-padding: 15px 20px;
+$content-padding-phone: 5px;
+
+@mixin box-sizing-border {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+.ui-body-c, .ui-overlay-c {
+	color: #FFF;
+}
+
+.movie,
+.music {
+	
+	figure {
+		position: relative;
+		cursor: pointer;
+	}
+
+	figure img {
+		display: block;
+	}
+
+	.title {
+		@include box-sizing-border;
+
+		background: rgba(0,0,0,.75);
+		padding: 2% 10% 2% 2%;
+		width: 100%;
+		font-size: 2.5em;
+		text-transform: uppercase;
+		line-height: 100%;
+		color: rgba(255,255,255,.8);
+		position: absolute;
+		bottom: 0;
+		
+		.more {
+			color: $redorange;
+			position: absolute;
+			bottom: 20%;
+			right: 2%;
+			font-size: 1rem;
+			text-transform: none;
+
+			&:after{
+				font-family: monospace;
+				color: #FFF;
+				content: ' +';
+			}
+
+		}
+	}
+	.expanded-details .more:after {
+		content: ' -';
+	}
+	.details {
+		width: 100%; /* fixes slideToggle jumping */
+		margin: 0;
+		padding: 0;
+
+		> li {
+			@include box-sizing-border;
+			background: none rgba(0,0,0,.25);
+			margin-left: 0;
+			padding: $content-padding;
+		}
+	}
+}
+
+.full {
+	width: 100%;
+	height: auto;
+}
+
+@media only screen and (max-width: 767px), only screen and (max-width: 800px) and (max-device-pixel-ratio : 1.5) {
+	body {
+		font-size: 13px;
+	}
+	.content,
+	.details > li {
+		padding: $content-padding-phone;
+	}
+}

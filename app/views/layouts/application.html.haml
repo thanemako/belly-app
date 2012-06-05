@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+%html
+%head
+	%title
+		= @title
+	%meta(name="viewport" content="width=device-width,initial-scale=1")
+	= stylesheet_link_tag "application", :media => "all"
+	= javascript_include_tag "application"
+	= csrf_meta_tags
+%body
+
+#movies.page(data-role="page" data-theme="a")
+	#main
+		%header	
+			.content
+				%h1 Official Top #10 Movies
+		#main-content
+			.content.clearfix
+				%article.movie
+					%figure
+						%img.full(src="http://cf2.imgobject.com/t/p/original/bW70zOg5d6FnTFwGVN3U6aPx0SU.jpg")
+						%figcaption.title
+							The Departed
+							%a.more Details
+						
+					%ul.details.cols
+						%li.col-33
+							%h3 Made in:
+							%p  2006
+						%li.col-33
+							%h3 Directed By:
+							%p  Martin Scorsese
+						%li.col-33.col-last
+							%h3 Starring
+							%ul
+								%li Leonardo DiCaprio
+								%li Jack Nicholson
+								%li Matt Damon
+		%footer
+			.content
+				%p= ['Copyright Thane Woidan', Time.now.year, 'for Belly'].join " "
+
+#music.page(data-role="page")
+	#main
+		%header	
+			.content
+				%h1 Music
+		#main-content
+			.content.clearfix
+				= yield
+				%p
+					Music
+		%footer
+			.content
+				%p= ['Copyright Thane Woidan', Time.now.year, 'for Belly'].join " "
+
