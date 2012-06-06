@@ -10,8 +10,20 @@ $(document).bind("mobileinit", function(){
 	});
 });
 
-
+// jquery recommends this for jq mobile instead of document.ready
 $(document).bind("pageinit", function(){
+	// get movie and music json
+	$.getJSON('movies.json', function(data){
+		var items = [];
+
+		$.each(data, function(key, val) {
+			items.push('<li>' + val + '</li>');
+		});
+		$('<ul/>', {
+			html: items.join('')
+		}).insertAfter('nav');
+	});
+
 	$('.details').hide();
 	$('figure').click(function(){
 		$(this).toggleClass('expanded-details');
