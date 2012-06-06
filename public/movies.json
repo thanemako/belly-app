@@ -1,0 +1,11 @@
+{
+	"title" : "The Departed",
+	"director" : "Martin Scorscese",
+	"releasedate" : "2006-26-08",
+	"imageurl": "assets/departed.jpg",
+	"starring" : [
+		"Leonardo DiCaprio",
+		"Matt Damon",
+		"Jack Nicholson"
+	]
+}
