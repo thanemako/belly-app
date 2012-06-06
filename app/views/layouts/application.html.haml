@@ -11,11 +11,13 @@
 
 #movies.page(data-role="page" data-theme="a")
 	#main
-		%header	
+		%header
 			.content
 				%h1 Official Top #10 Movies
 		#main-content
 			.content.clearfix
+				%nav
+					= yield
 				%article.movie
 					%figure
 						%img.full(src="http://cf2.imgobject.com/t/p/original/bW70zOg5d6FnTFwGVN3U6aPx0SU.jpg")
@@ -67,7 +69,8 @@
 				%h1 Music
 		#main-content
 			.content.clearfix
-				= yield
+				%nav
+					= yield
 				%p
 					Music
 		%footer
