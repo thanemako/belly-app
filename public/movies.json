@@ -1,11 +1,26 @@
 {
-	"title" : "The Departed",
-	"director" : "Martin Scorscese",
-	"releasedate" : "2006-26-08",
-	"imageurl": "assets/departed.jpg",
-	"starring" : [
-		"Leonardo DiCaprio",
-		"Matt Damon",
-		"Jack Nicholson"
+	"movies": [
+	{
+		"title" : "The Departed",
+		"director" : "Martin Scorscese",
+		"releasedate" : "2006-26-08",
+		"imageurl": "assets/movie-departed.jpg",
+		"starring" : [
+			"Leonardo DiCaprio",
+			"Matt Damon",
+			"Jack Nicholson"
+		]
+	},
+	{
+		"title" : "The Big Lebowski",
+		"director" : "Joel and Ethan Coen",
+		"releasedate" : "1998-03-06",
+		"imageurl": "assets/movie-lebowski.jpg",
+		"starring" : [
+			"Jeff Bridges",
+			"John Goodman",
+			"Steve Buscemi"
+		]
+	}
 	]
 }

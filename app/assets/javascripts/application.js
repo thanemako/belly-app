@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.tmpl.min
 //= require_tree .
 //= require jquery.mobile

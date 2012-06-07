@@ -658,11 +658,11 @@ table.zebra tbody tr:nth-child(odd) th {
 	max-width: 960px;
 	min-width: 320px;
 	margin: 0 auto;
-	background: #444 url(http://thanewoidan.com/images/work/333-75.png) 0 0 repeat;
+	background: #444 url(/assets/333-75.png) 0 0 repeat;
 }
 
 header {
-	background: none #336699;
+	background: none transparent;
 }
 
 header h1 {
