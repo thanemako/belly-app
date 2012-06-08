@@ -9,7 +9,7 @@
 	= csrf_meta_tags
 %body
 
-#movies.page(data-role="page" data-theme="x")
+#movies.page(data-role="page" data-theme="x" data-title="Top 10: Movies")
 	#main
 		%header
 			.content
@@ -24,7 +24,7 @@
 			.content
 				%p= ['Copyright Thane Woidan', Time.now.year, 'for Belly'].join " "
 
-#albums.page(data-role="page" data-theme="x")
+#albums.page(data-role="page" data-theme="x" data-title="Top 10: Albums")
 	#main
 		%header	
 			.content

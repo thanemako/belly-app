@@ -16,10 +16,8 @@ $content-padding-phone: 5px;
 	#{$property}: 			$value;
 }
 
-
-.ui-body-a, .ui-overlay-a {
-	color: #FFF;
-	background: none #222;
+header h1 {
+	font-size: 5em;
 }
 
 nav a {
@@ -32,7 +30,7 @@ nav a {
 	background-image:      -o-linear-gradient(top, #222222, #444444); /* Opera 11.10+ */
 	background-image:         linear-gradient(to bottom, #222222, #444444);
 
-	color: #FFF;
+	color: #999;
 	padding: 10px 2%;
 	font-size: 1.25em;
 	font-weight: bold;
@@ -51,6 +49,8 @@ nav a {
 
 nav.movies-nav a.movies-link,
 nav.albums-nav a.albums-link  {
+	color: #FFF;
+
 	background-color: #999999;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#999999), to(#777777)); /* Saf4+, Chrome */
 	background-image: -webkit-linear-gradient(top, #999999, #777777); /* Chrome 10+, Saf5.1+, iOS 5+ */
