@@ -1,26 +1,103 @@
 {
 	"movies": [
-	{
-		"title" : "The Departed",
-		"director" : "Martin Scorscese",
-		"releasedate" : "2006-26-08",
-		"imageurl": "assets/movie-departed.jpg",
-		"starring" : [
-			"Leonardo DiCaprio",
-			"Matt Damon",
-			"Jack Nicholson"
-		]
-	},
-	{
-		"title" : "The Big Lebowski",
-		"director" : "Joel and Ethan Coen",
-		"releasedate" : "1998-03-06",
-		"imageurl": "assets/movie-lebowski.jpg",
-		"starring" : [
-			"Jeff Bridges",
-			"John Goodman",
-			"Steve Buscemi"
-		]
-	}
+		{
+			"title" : "The Departed",
+			"director" : "Martin Scorscese",
+			"releasedate" : "2006-26-08",
+			"imageurl": "assets/movie-departed.jpg",
+			"starring" : [
+				"Leonardo DiCaprio",
+				"Matt Damon",
+				"Jack Nicholson"
+			]
+		},
+		{
+			"title" : "The Big Lebowski",
+			"director" : "Joel and Ethan Coen",
+			"releasedate" : "1998-03-06",
+			"imageurl": "assets/movie-lebowski.jpg",
+			"starring" : [
+				"Jeff Bridges",
+				"John Goodman",
+				"Steve Buscemi"
+			]
+		},
+		{
+			"title" : "Caddyshack",
+			"director" : "Harold Ramis",
+			"releasedate" : "1980-07-25",
+			"imageurl": "assets/movie-caddyshack.jpg",
+			"starring" : [
+				"Chevy Chase",
+				"Bill Burray",
+				"Ted Knight"
+			]
+		},
+		{
+			"title" : "Black Swan",
+			"director" : "Darren Aronofsky",
+			"releasedate" : "2010-12-23",
+			"imageurl": "assets/movie-blackswan.jpg",
+			"starring" : [
+				"Natalie Portman",
+				"Mila Kunis",
+				"Barbara Hershey"
+			]
+		},
+		{
+			"title" : "Batman Begins",
+			"director" : "Christopher Nolan",
+			"releasedate" : "2005-06-15",
+			"imageurl": "assets/movie-batmanbegins.jpg",
+			"starring" : [
+				"Christian Bale",
+				"Michael Caine",
+				"Cillian Murphy"
+			]
+		},
+		{
+			"title" : "The Dark Knight",
+			"director" : "Christopher Nolan",
+			"releasedate" : "2008-07-18",
+			"imageurl": "assets/movie-darkknight.jpg",
+			"starring" : [
+				"Christian Bale",
+				"Heath Ledger",
+				"Aaron Eckhart"
+			]
+		},
+		{
+			"title" : "There Will Be Blood",
+			"director" : "Paul Thomas Anderson",
+			"releasedate" : "2007-12-26",
+			"imageurl": "assets/movie-twbb.jpg",
+			"starring" : [
+				"Daniel Day-Lewis",
+				"Paul Dano",
+				"Dillon Freasier"
+			]
+		},
+		{
+			"title" : "Fight Club",
+			"director" : "David Fincher",
+			"releasedate" : "1999-10-15",
+			"imageurl": "assets/movie-fightclub.jpg",
+			"starring" : [
+				"Edward Norton",
+				"Brad Pitt",
+				"Helena Bonham Carter"
+			]
+		},
+		{
+			"title" : "Inception",
+			"director" : "Christopher Nolan",
+			"releasedate" : "2010-07-16",
+			"imageurl": "assets/movie-inception.jpg",
+			"starring" : [
+				"Leonardo DiCaprio",
+				"Joeseph Gordon-Levitt",
+				"Marion Cotillard"
+			]
+		}
 	]
 }
