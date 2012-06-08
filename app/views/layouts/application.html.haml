@@ -9,14 +9,14 @@
 	= csrf_meta_tags
 %body
 
-#movies.page(data-role="page" data-theme="a")
+#movies.page(data-role="page" data-theme="x")
 	#main
 		%header
 			.content
 				%h1 Top 10
 		#main-content
 			.content.clearfix
-				%nav
+				%nav.movies-nav
 					= yield
 				%section#movieslist
 					/ JSON drops movie listing here
@@ -24,14 +24,14 @@
 			.content
 				%p= ['Copyright Thane Woidan', Time.now.year, 'for Belly'].join " "
 
-#albums.page(data-role="page" data-theme="a")
+#albums.page(data-role="page" data-theme="x")
 	#main
 		%header	
 			.content
 				%h1 Top 10
 		#main-content
 			.content.clearfix
-				%nav
+				%nav.albums-nav
 					= yield
 				%section#albumslist
 					/ JSON drops music listing here

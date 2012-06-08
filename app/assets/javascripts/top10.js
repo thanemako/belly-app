@@ -47,7 +47,7 @@ var albummarkup =
 			      <h3>Artist</h3>										\
 			      <p>${artist}</p>										\
 			    </li>													\
-			    <li class="col-50">										\
+			    <li class="col-50 col-last">										\
 			      <h3>Release Date</h3>									\
 			      <p>${releasedate}</p>									\
 			    </li>													\
@@ -71,7 +71,6 @@ $(document).bind("mobileinit", function(){
 	    	var movies;
 	        $.each(data.movies, function(i, movie) {
 	            makeTemplate(movie, $('#movieslist'), moviemarkup, "movies");
-	            console.log('made it in movies');
 	        });
 	        $('.details').hide();
 	        $('figure').click(function(c){
@@ -105,7 +104,7 @@ $(document).bind("pageinit", function(){
 			$.mobile.changePage( "#albums", { transition: "slide"} );
 		}
 		else {
-			$.mobile.changePage( "#albums", { transition: "slide"} );
+			$.mobile.changePage( "#movies", { transition: "slide"} );
 		}
 		
 	});
