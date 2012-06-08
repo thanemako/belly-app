@@ -650,15 +650,14 @@ table.zebra tbody tr:nth-child(odd) th {
 	CONTAINERS
 **************/
 
-/* spaces content during resizing */
-.page { padding: 0 20px; }
-
 #main {
 	width: 100%;
 	max-width: 960px;
 	min-width: 320px;
 	margin: 0 auto;
 	background: #444 url(/assets/333-75.png) 0 0 repeat;
+	-webkit-box-shadow: 0 0 10px 2px rgba(0,0,0,.5);
+	box-shadow: 0 0 10px 2px rgba(0,0,0,.5);
 }
 
 header {

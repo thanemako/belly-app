@@ -1,0 +1,64 @@
+{
+	"albums": [
+		{
+			"title" : "Test",
+			"artist" : "",
+			"releasedate" : "",
+			"imageurl": "assets/movie-caddyshack.jpg"
+		},
+		{
+			"title" : "Test",
+			"artist" : "",
+			"releasedate" : "",
+			"imageurl": "assets/movie-caddyshack.jpg"
+		},
+		{
+			"title" : "Test",
+			"artist" : "",
+			"releasedate" : "",
+			"imageurl": "assets/movie-caddyshack.jpg"
+		},
+		{
+			"title" : "Test",
+			"artist" : "",
+			"releasedate" : "",
+			"imageurl": "assets/movie-caddyshack.jpg"
+		},
+		{
+			"title" : "Test",
+			"artist" : "",
+			"releasedate" : "",
+			"imageurl": "assets/movie-caddyshack.jpg"
+		},
+		{
+			"title" : "Test",
+			"artist" : "",
+			"releasedate" : "",
+			"imageurl": "assets/movie-caddyshack.jpg"
+		},
+		{
+			"title" : "Test",
+			"artist" : "",
+			"releasedate" : "",
+			"imageurl": "assets/movie-caddyshack.jpg"
+		},
+		{
+			"title" : "Test",
+			"artist" : "",
+			"releasedate" : "",
+			"imageurl": "assets/movie-caddyshack.jpg"
+		},
+		{
+			"title" : "Test",
+			"artist" : "",
+			"releasedate" : "",
+			"imageurl": "assets/movie-caddyshack.jpg"
+		},
+		{
+			"title" : "Test",
+			"artist" : "",
+			"releasedate" : "",
+			"imageurl": "assets/movie-caddyshack.jpg"
+		}
+	]
+}

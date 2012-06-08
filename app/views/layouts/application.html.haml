@@ -13,7 +13,7 @@
 	#main
 		%header
 			.content
-				%h1 Official Top #10
+				%h1 Top 10
 		#main-content
 			.content.clearfix
 				%nav
@@ -24,16 +24,16 @@
 			.content
 				%p= ['Copyright Thane Woidan', Time.now.year, 'for Belly'].join " "
 
-#music.page(data-role="page" data-theme="a")
+#albums.page(data-role="page" data-theme="a")
 	#main
 		%header	
 			.content
-				%h1 Music
+				%h1 Top 10
 		#main-content
 			.content.clearfix
 				%nav
 					= yield
-				%section#movieslist
+				%section#albumslist
 					/ JSON drops music listing here
 		%footer
 			.content

@@ -23,6 +23,17 @@
 			]
 		},
 		{
+			"title" : "Reservoir Dogs",
+			"director" : "Quentin Tarantino",
+			"releasedate" : "1992-06-25",
+			"imageurl": "assets/movie-reservoirdogs.jpg",
+			"starring" : [
+				"Tim Roth",
+				"Harvey Keitel",
+				"Steve Buscemi"
+			]
+		},
+		{
 			"title" : "Caddyshack",
 			"director" : "Harold Ramis",
 			"releasedate" : "1980-07-25",

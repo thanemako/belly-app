@@ -13,7 +13,7 @@ var moviemarkup =
 			      <a class="more ui-link">Film details</a>				\
 			    </figcaption>											\
 			  </figure>													\
-			  <ul class="details cols">			\
+			  <ul class="details cols">									\
 			    <li class="col-33">										\
 			      <h3>Release Date</h3>									\
 			      <p>${releasedate}</p>									\
@@ -29,6 +29,27 @@ var moviemarkup =
 			        <li>${starring[1]}</li>								\
 			        <li>${starring[2]}</li>								\
 			      </ul>													\
+			    </li>													\
+			  </ul>														\
+			</article>';
+
+var albummarkup =
+			'<article class="album">									\
+			  <figure>													\
+			    <img src="${imageurl}" class="full">					\
+			    <figcaption class="title">								\
+			      ${title}												\
+			      <a class="more ui-link">Album details</a>				\
+			    </figcaption>											\
+			  </figure>													\
+			  <ul class="details cols">									\
+			    <li class="col-50">										\
+			      <h3>Artist</h3>										\
+			      <p>${artist}</p>										\
+			    </li>													\
+			    <li class="col-50">										\
+			      <h3>Release Date</h3>									\
+			      <p>${releasedate}</p>									\
 			    </li>													\
 			  </ul>														\
 			</article>';
@@ -50,12 +71,24 @@ $(document).bind("mobileinit", function(){
 	    	var movies;
 	        $.each(data.movies, function(i, movie) {
 	            makeTemplate(movie, $('#movieslist'), moviemarkup, "movies");
+	            console.log('made it in movies');
 	        });
 	        $('.details').hide();
 	        $('figure').click(function(c){
 	        	$(this).next('.details').slideToggle();
 	        	$(this).next('.details').toggleClass('expanded-details');
 	        });
+	    });
+	    $.getJSON('albums.json', function(data) { 
+	    	var albums;
+	        $.each(data.albums, function(i, album) {
+	            makeTemplate(album, $('#albumslist'), albummarkup, "albums");
+	        });
+	        // $('.details').hide();
+	        // $('figure').click(function(c){
+	        // 	$(this).next('.details').slideToggle();
+	        // 	$(this).next('.details').toggleClass('expanded-details');
+	        // });
 	    });
 });
 });
@@ -69,17 +102,13 @@ $(document).bind("pageinit", function(){
 	
 	$('body').swipe(function(){
 		if (currentpage == 'movies') {
-			$.mobile.changePage( "#music", { transition: "slide"} );
+			$.mobile.changePage( "#albums", { transition: "slide"} );
 		}
 		else {
-			$.mobile.changePage( "#movies", { transition: "slide"} );
+			$.mobile.changePage( "#albums", { transition: "slide"} );
 		}
 		
 	});
-});
-
-$(document).ready(function(){
-	// putting this in pageinit would toggle the detail slide twice, just bouncing it open and closed
 });
 
 $(document).bind("pagechange", function(){
