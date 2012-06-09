@@ -1,7 +1,5 @@
 class HomeController < ApplicationController
   def index
-  	@title = "Home"
-
-  	@music = "music"
+  	@title = "Top 10 Movies and Albums"
   end
 end
