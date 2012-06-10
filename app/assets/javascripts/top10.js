@@ -1,5 +1,6 @@
-var currentpage;
+var currentPage;
 var pages;
+var pageIDs = [];
 
 // template markup is in top10-template.js
 function makeTemplate(data, appendTarget, template, name) {
@@ -36,23 +37,34 @@ $(document).bind("mobileinit", function(){
 	        // 	$(this).next('.details').toggleClass('expanded-details');
 	        // });
 	    });
-});
+	});
 });
 
 // jQuery recommends this for JQ mobile instead of document.ready
 $(document).bind("pageinit", function(){
-	$('body').swipe(function(){
-		if (currentpage == 'movies') {
-			$.mobile.changePage( "#albums", { transition: "slide"} );
-		}
-		else {
-			$.mobile.changePage( "#movies", { transition: "slide"} );
-		}
-		
-	});
+	pages = $('body > .page');
+	if (pages.length > pageIDs.length) {
+		pages.each(function(e){
+			pageIDs.push($(this).attr('id'));
+		});
+	}
+
 });
 
 $(document).bind("pagechange", function(){
 	// gets current page ID on page change
-	currentpage = $('.ui-page-active').attr('id');
+	currentPage = $('.ui-page-active').attr('id');
+	var nextPageIndex = pageIDs.indexOf(currentPage) + 1;
+	
+	$('body').swipe(function(){
+		// at the last page
+		if ((pageIDs.indexOf(currentPage) + 1) == pages.length) {
+			$.mobile.changePage('#'+pageIDs[0]);
+		}
+		else {
+			$.mobile.changePage("#"+pageIDs[nextPageIndex]);
+		}	
+		
+	});
+	console.log(nextPageIndex);
 });
