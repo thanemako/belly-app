@@ -1,4 +1,35 @@
-%a.movies-link.col-50(href="#movies")
-	Movies
-%a.albums-link.col-50.col-last(href="#albums")
-	Albums
+#movies.page(data-role="page" data-theme="x" data-title="Top 10: Movies")
+	#main
+		%header
+			.content
+				%h1 Top 10 Movies
+		#main-content
+			.content.clearfix
+				%nav.movies-nav
+					%a.movies-link.col-50(href="#movies")
+						Movies
+					%a.albums-link.col-50.col-last(href="#albums")
+						Albums
+				%section#movieslist
+					/ JSON drops movie listing here
+		%footer
+			.content
+				%p= ['Copyright Thane Woidan', Time.now.year, 'for Belly'].join " "
+
+#albums.page(data-role="page" data-theme="x" data-title="Top 10: Albums")
+	#main
+		%header	
+			.content
+				%h1 Top 10 Albums
+		#main-content
+			.content.clearfix
+				%nav.albums-nav
+					%a.movies-link.col-50(href="#movies")
+						Movies
+					%a.albums-link.col-50.col-last(href="#albums")
+						Albums
+				%section#albumslist
+					/ JSON drops music listing here
+		%footer
+			.content
+				%p= ['Copyright Thane Woidan', Time.now.year, 'for Belly'].join " "
