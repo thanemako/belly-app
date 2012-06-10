@@ -21,8 +21,8 @@ $(document).bind("mobileinit", function(){
 	        $.each(data.movies, function(i, movie) {
 	            makeTemplate(movie, $('#movieslist'), movieMarkup, "movies");
 	        });
-	        $('.details').hide();
-	        $('figure').click(function(c){
+	        $('.movie .details').hide();
+	        $('.movie figure').click(function(c){
 	        	$(this).next('.details').slideToggle();
 	        	$(this).toggleClass('expanded-details');
 	        });
@@ -32,11 +32,7 @@ $(document).bind("mobileinit", function(){
 	        $.each(data.albums, function(i, album) {
 	            makeTemplate(album, $('#albumslist'), albumMarkup, "albums");
 	        });
-	        // $('.details').hide();
-	        // $('figure').click(function(c){
-	        // 	$(this).next('.details').slideToggle();
-	        // 	$(this).next('.details').toggleClass('expanded-details');
-	        // });
+	       	
 	    });
 	});
 });

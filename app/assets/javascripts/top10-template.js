@@ -28,20 +28,19 @@ var movieMarkup =
 			</article>';
 
 var albumMarkup =
-			'<article class="album">									\
+			'<article class="album col-50">								\
 			  <figure>													\
 			    <img src="${imageurl}" class="full">					\
 			    <figcaption class="title">								\
 			      ${title}												\
-			      <a class="more ui-link">Album details</a>				\
 			    </figcaption>											\
 			  </figure>													\
-			  <ul class="details cols">									\
-			    <li class="col-50">										\
+			  <ul class="details nobull">								\
+			    <li class="col-60">										\
 			      <h3>Artist</h3>										\
 			      <p>${artist}</p>										\
 			    </li>													\
-			    <li class="col-50 col-last">							\
+			    <li class="col-40 col-last">							\
 			      <h3>Release Date</h3>									\
 			      <p>${releasedate}</p>									\
 			    </li>													\

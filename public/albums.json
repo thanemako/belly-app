@@ -1,64 +1,64 @@
 {
 	"albums": [
 		{
-			"title" : "Test",
-			"artist" : "",
-			"releasedate" : "",
-			"imageurl": "assets/movie-caddyshack.jpg"
+			"title" : "Weezer (Blue album)",
+			"artist" : "Weezer",
+			"releasedate" : "1994-05-10",
+			"imageurl": "assets/album-blue.jpg"
 		},
 		{
-			"title" : "Test",
-			"artist" : "",
-			"releasedate" : "",
-			"imageurl": "assets/movie-caddyshack.jpg"
+			"title" : "The Dark Knight",
+			"artist" : "Hans Zimmer and James Newton Howard",
+			"releasedate" : "2008-04-30",
+			"imageurl": "assets/album-darkknight.jpg"
 		},
 		{
-			"title" : "Test",
-			"artist" : "",
-			"releasedate" : "",
-			"imageurl": "assets/movie-caddyshack.jpg"
+			"title" : "Jane Doe",
+			"artist" : "Converge",
+			"releasedate" : "2001-09-04",
+			"imageurl": "assets/album-janedoe.jpg"
 		},
 		{
-			"title" : "Test",
-			"artist" : "",
-			"releasedate" : "",
-			"imageurl": "assets/movie-caddyshack.jpg"
+			"title" : "Liquid Swords",
+			"artist" : "Genius/GZA",
+			"releasedate" : "1995-11-07",
+			"imageurl": "assets/album-liquidswords.jpg"
 		},
 		{
-			"title" : "Test",
-			"artist" : "",
-			"releasedate" : "",
-			"imageurl": "assets/movie-caddyshack.jpg"
+			"title" : "The Mouse and the Mask",
+			"artist" : "Danger Doom",
+			"releasedate" : "2005-10-11",
+			"imageurl": "assets/album-mouseandmask.jpg"
 		},
 		{
-			"title" : "Test",
-			"artist" : "",
-			"releasedate" : "",
-			"imageurl": "assets/movie-caddyshack.jpg"
+			"title" : "Relationship of Command",
+			"artist" : "At the Drive-In",
+			"releasedate" : "2000-09-12",
+			"imageurl": "assets/album-relationship.jpg"
 		},
 		{
-			"title" : "Test",
-			"artist" : "",
-			"releasedate" : "",
-			"imageurl": "assets/movie-caddyshack.jpg"
+			"title" : "The Bends",
+			"artist" : "Radiohead",
+			"releasedate" : "1995-03-13",
+			"imageurl": "assets/album-thebends.jpg"
 		},
 		{
-			"title" : "Test",
-			"artist" : "",
-			"releasedate" : "",
-			"imageurl": "assets/movie-caddyshack.jpg"
+			"title" : "The Wall",
+			"artist" : "Pink Floyd",
+			"releasedate" : "1979-11-30",
+			"imageurl": "assets/album-thewall.jpg"
 		},
 		{
-			"title" : "Test",
-			"artist" : "",
-			"releasedate" : "",
-			"imageurl": "assets/movie-caddyshack.jpg"
+			"title" : "White Pony",
+			"artist" : "Deftones",
+			"releasedate" : "2000-06-20",
+			"imageurl": "assets/album-whitepony.jpg"
 		},
 		{
-			"title" : "Test",
-			"artist" : "",
-			"releasedate" : "",
-			"imageurl": "assets/movie-caddyshack.jpg"
+			"title" : "Discovery",
+			"artist" : "Daft Punk",
+			"releasedate" : "2001-03-12",
+			"imageurl": "assets/album-discovery.jpg"
 		}
 	]
 }
