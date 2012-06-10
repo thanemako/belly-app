@@ -1,5 +1,6 @@
 var currentPage;
 var pages;
+var nextPageIndex;
 var pageIDs = [];
 
 // template markup is in top10-template.js
@@ -48,14 +49,6 @@ $(document).bind("pageinit", function(){
 			pageIDs.push($(this).attr('id'));
 		});
 	}
-
-});
-
-$(document).bind("pagechange", function(){
-	// gets current page ID on page change
-	currentPage = $('.ui-page-active').attr('id');
-	var nextPageIndex = pageIDs.indexOf(currentPage) + 1;
-	
 	$('body').swipe(function(){
 		// at the last page
 		if ((pageIDs.indexOf(currentPage) + 1) == pages.length) {
@@ -66,5 +59,10 @@ $(document).bind("pagechange", function(){
 		}	
 		
 	});
-	console.log(nextPageIndex);
+});
+
+$(document).bind("pagechange", function(){
+	// gets current and next page IDs on page change
+	currentPage = $('.ui-page-active').attr('id');
+	nextPageIndex = pageIDs.indexOf(currentPage) + 1;
 });
