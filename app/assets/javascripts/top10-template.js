@@ -1,4 +1,4 @@
-var moviemarkup =
+var movieMarkup =
 			'<article class="movie">									\
 			  <figure>													\
 			    <img src="${imageurl}" class="full">					\
@@ -27,7 +27,7 @@ var moviemarkup =
 			  </ul>														\
 			</article>';
 
-var albummarkup =
+var albumMarkup =
 			'<article class="album">									\
 			  <figure>													\
 			    <img src="${imageurl}" class="full">					\

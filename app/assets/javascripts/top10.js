@@ -17,18 +17,18 @@ $(document).bind("mobileinit", function(){
 	    $.getJSON('movies.json', function(data) { 
 	    	var movies;
 	        $.each(data.movies, function(i, movie) {
-	            makeTemplate(movie, $('#movieslist'), moviemarkup, "movies");
+	            makeTemplate(movie, $('#movieslist'), movieMarkup, "movies");
 	        });
 	        $('.details').hide();
 	        $('figure').click(function(c){
 	        	$(this).next('.details').slideToggle();
-	        	$(this).next('.details').toggleClass('expanded-details');
+	        	$(this).toggleClass('expanded-details');
 	        });
 	    });
 	    $.getJSON('albums.json', function(data) { 
 	    	var albums;
 	        $.each(data.albums, function(i, album) {
-	            makeTemplate(album, $('#albumslist'), albummarkup, "albums");
+	            makeTemplate(album, $('#albumslist'), albumMarkup, "albums");
 	        });
 	        // $('.details').hide();
 	        // $('figure').click(function(c){
