@@ -1,6 +1,6 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/************************************/
+/* BASE/BOILERPLATE CSS IN main.css */
+/************************************/
 
 $redorange: #FF512F;
 $content-padding: 15px 20px;
@@ -16,8 +16,31 @@ $content-padding-phone: 5px;
 	#{$property}: 			$value;
 }
 
+/* CONTAINERS */
+#main {
+	background: none transparent;
+}
+
+#main-content {
+	@include prefixer(box-shadow, 0 0 10px 2px rgba(0,0,0,.5));
+	background: #444 url(/assets/333-75.png) 0 0 repeat;
+}
+
+/* HEADER */
+header {
+	/*background: none rgba(0,0,0,.25);*/
+}
+
 header h1 {
 	font-size: 5em;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #000;
+	line-height: 110%;
+
+	.type {
+		color: $redorange;
+		text-shadow: 1px 1px 1px darken($redorange, 35%);
+	}
 }
 
 nav a {
@@ -79,7 +102,7 @@ nav.albums-nav a.albums-link  {
 
 		line-height: 100%;
 		color: #FFF;
-		text-shadow: 1px 1px 1px #333, 2px 2px 1px #000;
+		text-shadow: 1px 1px 0 #333, 2px 2px 0 #000;
 		
 		.more {
 			color: $redorange;
@@ -171,11 +194,11 @@ nav.albums-nav a.albums-link  {
 
 /* ALBUM SECTION */
 #albums-list {
-	background-image: linear-gradient(bottom, transparent 0%, #555555 98%);
-	background-image: -o-linear-gradient(bottom, transparent 0%, #555555 98%);
-	background-image: -moz-linear-gradient(bottom, transparent 0%, #555555 98%);
-	background-image: -webkit-linear-gradient(bottom, transparent 0%, #555555 98%);
-	background-image: -ms-linear-gradient(bottom, transparent 0%, #555555 98%);
+	background-image: linear-gradient(top, #555555 0, transparent 15%);
+	background-image: -o-linear-gradient(top, #555555 0, transparent 15%);
+	background-image: -moz-linear-gradient(top, #555555 0, transparent 15%);
+	background-image: -webkit-linear-gradient(top, #555555 0, transparent 15%);
+	background-image: -ms-linear-gradient(top, #555555 0, transparent 15%);
 }
 
 .album {

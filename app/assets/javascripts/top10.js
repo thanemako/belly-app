@@ -18,7 +18,7 @@ $(document).bind("mobileinit", function(){
 	        });
 	        $('.movie .details').hide();
 	        $('.movie figure').click(function(c){
-	        	$(this).next('.details').slideToggle();
+	        	$(this).next('.details').stop(true, true).slideToggle("fast");
 	        	$(this).toggleClass('expanded-details');
 	        });
 	    });
