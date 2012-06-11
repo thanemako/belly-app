@@ -35,14 +35,8 @@ var albumMarkup =
 			      ${title}												\
 			    </figcaption>											\
 			  </figure>													\
-			  <ul class="details nobull">								\
-			    <li class="col-60">										\
-			      <h3>Artist</h3>										\
-			      <p>${artist}</p>										\
-			    </li>													\
-			    <li class="col-40 col-last">							\
-			      <h3>Release Date</h3>									\
-			      <p>${releasedate}</p>									\
-			    </li>													\
-			  </ul>														\
+			  <p class="details">										\
+			    By <strong>${artist}</strong>,							\
+			    released <strong>${releasedate}</strong>				\
+		      </p>														\
 			</article>';

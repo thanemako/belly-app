@@ -98,6 +98,20 @@ nav.albums-nav a.albums-link  {
 
 		}
 	}
+
+	.details {
+		margin: 0;
+		padding: 0;
+
+		> li {
+			@include box-sizing-border;
+			margin-left: 0;
+		}
+
+		h3 + * {
+			color: #999;
+		}
+	}
 }
 
 /* MOVIE SECTION */
@@ -137,8 +151,6 @@ nav.albums-nav a.albums-link  {
 	}
 	.details {
 		width: 100%; /* fixes slideToggle jumping */
-		margin: 0;
-		padding: 0;
 
 		h3 {
 			padding-bottom: 3px;
@@ -146,9 +158,7 @@ nav.albums-nav a.albums-link  {
 		}
 
 		> li {
-			@include box-sizing-border;
 			background: none rgba(0,0,0,.25);
-			margin-left: 0;
 			padding: $content-padding;
 			min-height: 110px;
 		}
@@ -160,20 +170,41 @@ nav.albums-nav a.albums-link  {
 }
 
 /* ALBUM SECTION */
+#albums-list {
+	background-image: linear-gradient(bottom, transparent 0%, #555555 98%);
+	background-image: -o-linear-gradient(bottom, transparent 0%, #555555 98%);
+	background-image: -moz-linear-gradient(bottom, transparent 0%, #555555 98%);
+	background-image: -webkit-linear-gradient(bottom, transparent 0%, #555555 98%);
+	background-image: -ms-linear-gradient(bottom, transparent 0%, #555555 98%);
+}
+
 .album {
 	&:nth-child(even){
 		margin-right: 0;
 	}
 	figure {
+		margin-bottom: .25em;
+
 		img {
-			
-			margin-bottom: .75em;
+			@include prefixer(box-shadow, 0 1px 3px rgba(0,0,0,.75));
+			margin-bottom: .5em;
 		}
 	}
 	.title {
 		font-size: 2em;
 		text-align: center;
-		text-shadow: 1px 1px #000, -1px -1px #000, -1px 1px #000, 1px -1px #000, 1px 1px #000;
+		font-style: italic;
+	}
+	.details {
+		font-size: .85em;
+		padding: $content-padding;
+		padding-top: 0;
+		color: #999;
+		text-align: center;
+
+		strong {
+			color: #DDD;
+		}
 	}
 }
 
@@ -194,7 +225,8 @@ nav.albums-nav a.albums-link  {
 	}
 
 	.content,
-	.details > li {
+	.details > li,
+	.album .details {
 		padding: $content-padding-phone;
 	}
 
@@ -216,6 +248,7 @@ nav.albums-nav a.albums-link  {
 			display: block;
 			width: auto;
 			min-height: 1px;
+			padding: $content-padding-phone;
 		}
 	}
 	

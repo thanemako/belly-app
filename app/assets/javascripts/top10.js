@@ -10,16 +10,11 @@ function makeTemplate(data, appendTarget, template, name) {
 }
 
 $(document).bind("mobileinit", function(){
-	// overrides default page transition to slide
-	$.extend($.mobile, {
-		defaultPageTransition: 'slide'
-	});
-
 	$(function() {
 	    $.getJSON('movies.json', function(data) { 
 	    	var movies;
 	        $.each(data.movies, function(i, movie) {
-	            makeTemplate(movie, $('#movieslist'), movieMarkup, "movies");
+	            makeTemplate(movie, $('#movies-list'), movieMarkup, "movies");
 	        });
 	        $('.movie .details').hide();
 	        $('.movie figure').click(function(c){
@@ -30,7 +25,7 @@ $(document).bind("mobileinit", function(){
 	    $.getJSON('albums.json', function(data) { 
 	    	var albums;
 	        $.each(data.albums, function(i, album) {
-	            makeTemplate(album, $('#albumslist'), albumMarkup, "albums");
+	            makeTemplate(album, $('#albums-list'), albumMarkup, "albums");
 	        });
 	       	
 	    });
@@ -45,13 +40,13 @@ $(document).bind("pageinit", function(){
 			pageIDs.push($(this).attr('id'));
 		});
 	}
-	$('body').swipe(function(){
+	$('body').swipeleft(function(){
 		// at the last page
 		if ((pageIDs.indexOf(currentPage) + 1) == pages.length) {
-			$.mobile.changePage('#'+pageIDs[0]);
+			$.mobile.changePage('#'+pageIDs[0], { transition: "slide"});
 		}
 		else {
-			$.mobile.changePage("#"+pageIDs[nextPageIndex]);
+			$.mobile.changePage("#"+pageIDs[nextPageIndex], { transition: "slide"});
 		}	
 		
 	});
